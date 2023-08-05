@@ -1,0 +1,18 @@
+<h1>Wikinimous</h1>
+
+<h2>Editing Article</h2>
+
+<div>
+  <%= form_with model: @article do |a| %>
+    <%= a.label :title %>
+    <%= a.text_field :title %>
+    <%= a.label :content %>
+    <%= a.text_field :content %>
+    <%= a.submit "Update Article" %>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Show Article", article_path %>
+  <%= link_to "Back", articles_path %>
+</div>
